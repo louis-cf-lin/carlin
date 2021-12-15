@@ -210,6 +210,35 @@ nav {
   align-items: center;
   justify-content: flex-end;
   padding: 20vh $side-spacing;
+  .landing-contact {
+    position: absolute;
+    top: 60px;
+    display: flex;
+    align-content: center;
+    right: $side-spacing;
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.1s ease-out;
+      p {
+        display: none;
+      }
+      * {
+        color: white;
+        font-size: 0.75rem;
+        transition: color 0.1s ease-out;
+      }
+      &:hover {
+        background: rgba(black, 0.5);
+        &,
+        * {
+          color: $logo-orange;
+        }
+      }
+    }
+  }
   .landing-msg {
     color: $lightest;
     font-size: 1.75rem;
@@ -515,8 +544,10 @@ footer {
     }
     .nav-container {
       a {
+        margin-left: 1rem;
         p {
           display: block;
+          transition: color 0.1s ease-out;
         }
         i {
           background: linear-gradient(
@@ -527,6 +558,11 @@ footer {
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+        }
+        &:hover {
+          p {
+            color: $logo-orange;
+          }
         }
       }
     }
@@ -551,33 +587,14 @@ footer {
     justify-content: center;
     padding: 10vh $side-spacing 0 $side-spacing;
     .landing-contact {
-      display: flex;
-      align-content: center;
-      position: absolute;
-      top: 60px;
-      right: $side-spacing;
-
       a {
-        display: flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
         margin-left: 1rem;
-        border-radius: 0.5rem;
-        transition: background-color 0.1s ease-out;
+        padding: 0.5rem 1rem;
+        p {
+          display: block;
+        }
         i {
           margin-right: 0.5rem;
-        }
-        * {
-          color: white;
-          font-size: 0.75rem;
-          transition: color 0.1s ease-out;
-        }
-        &:hover {
-          background: rgba(black, 0.5);
-          &,
-          * {
-            color: $logo-orange;
-          }
         }
       }
     }
