@@ -217,10 +217,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  .fill-btn {
-    font-size: 1.25rem;
-  }
-
   .line-btn {
     font-size: 1.25rem;
     &::after {
@@ -228,31 +224,6 @@ body {
       left: 4px;
       height: calc(100% - 8px);
       width: calc(100% - 8px);
-    }
-  }
-
-  .landing {
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10vh $side-spacing 0 $side-spacing;
-    .landing-contact {
-      a {
-        margin-left: 1rem;
-        padding: 0.5rem 1rem;
-        p {
-          display: block;
-        }
-        i {
-          margin-right: 0.5rem;
-        }
-      }
-    }
-    .landing-msg {
-      font-weight: 500;
-      font-size: 4rem;
-      width: 85%;
-      text-align: left;
-      line-height: 150%;
     }
   }
 
@@ -337,12 +308,6 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .landing {
-    .landing-msg {
-      width: 50%;
-    }
-  }
-
   .services {
     padding: 10vh $side-spacing;
     .card-container {

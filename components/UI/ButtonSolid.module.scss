@@ -22,3 +22,9 @@
     background-position: left;
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}

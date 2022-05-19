@@ -143,3 +143,36 @@
     transform: translateY(12px);
   }
 }
+
+@media only screen and (min-width: 768px) {
+  .landing {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10vh $side-spacing 0 $side-spacing;
+  }
+  .contact {
+    a {
+      margin-left: 1rem;
+      padding: 0.5rem 1rem;
+      p {
+        display: block;
+      }
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  .title {
+    font-weight: 500;
+    font-size: 4rem;
+    width: 85%;
+    text-align: left;
+    line-height: 150%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .title {
+    width: 50%;
+  }
+}
