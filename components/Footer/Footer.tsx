@@ -64,5 +64,3 @@ const Footer: FC = () => {
 };
 
 export default Footer;
-
-// TODO - grad-icon style
