@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-import classes from "./header.module.scss";
+import classes from "./Header.module.scss";
 
 const Header: FC = () => {
   return (
-    <header>
+    <header className={classes.header}>
       <nav className={classes.nav}>
         <a href="#top" className={classes.logo}>
           <div className={classes.horizontal}>

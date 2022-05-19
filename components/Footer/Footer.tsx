@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-import classes from "./footer.module.scss";
+import classes from "./Footer.module.scss";
 
 const Footer: FC = () => {
   return (

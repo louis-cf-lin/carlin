@@ -1,5 +1,12 @@
 @import "variables";
 
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .main {
   width: 100%;
 }
