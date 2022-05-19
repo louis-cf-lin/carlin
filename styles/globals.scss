@@ -28,3 +28,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.grad-icon {
+  background: linear-gradient(
+    to bottom right,
+    $logo-red,
+    $logo-orange,
+    $logo-yellow
+  ) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}

@@ -29,7 +29,9 @@ const Footer: FC = () => {
       </Link>
       <Link href="https://goo.gl/maps/PEtSSewDp2Fr8RAf6" target="_blank">
         <a className={classes.footerBlock}>
-          <i className={`material-icons-outlined ${classes.icon}`}>place</i>
+          <i className={`material-icons-outlined ${classes.icon} grad-icon`}>
+            place
+          </i>
           <div className={classes.address}>
             <p>74E France Street South</p>
             <p>Eden Terrace</p>
@@ -48,7 +50,7 @@ const Footer: FC = () => {
       </Link>
       <Link href="mailto:info@carlintech.com" target="_blank">
         <a className={classes.footerBlock}>
-          <i className={`material-icons-outlined ${classes.icon} grad-icon"`}>
+          <i className={`material-icons-outlined ${classes.icon} grad-icon`}>
             email
           </i>
           <p>info@carlintech.com</p>

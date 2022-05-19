@@ -11,8 +11,7 @@
 }
 
 .logo {
-  width: 25vw;
-  margin-right: 5vw;
+  width: 5rem;
   .logoVertical {
     display: none;
   }
@@ -23,10 +22,9 @@
 
 .icon {
   display: flex;
-  width: 10vw;
+  width: 2.5rem;
   font-size: 1.5em;
   transition: margin-left 0.1s ease-out;
-  text-align: center;
 }
 
 .footerBlock {

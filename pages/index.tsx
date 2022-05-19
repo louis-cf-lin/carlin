@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           name="description"
           content="Carlin Tech - tomorrow's tech solutions, today."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fav.ico" />
       </Head>
       <Header />
 

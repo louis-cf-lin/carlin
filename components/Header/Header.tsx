@@ -1,41 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 
 import classes from "./Header.module.scss";
 
 const Header: FC = () => {
+  const ref = useRef<HTMLHeadElement>(null);
+  const [navShown, setNavShown] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      if (document.body.scrollTop > 50) {
+        setNavShown(true);
+      } else {
+        setNavShown(false);
+      }
+    };
+    document.body.addEventListener("scroll", onScroll);
+    return () => document.body.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className={classes.header}>
-      <nav className={classes.nav}>
+    <header ref={ref} className={classes.header}>
+      <nav className={`${classes.nav} ${navShown ? classes.show : ""}`}>
         <a href="#top" className={classes.logo}>
           <div className={classes.horizontal}>
             <Image
               src="/logo-horizontal-dark.png"
-              width={4331}
-              height={1000}
+              layout="fill"
+              objectFit="contain"
               alt="Carlin Tech"
             />
           </div>
           <div className={classes.icon}>
-            <Image
-              src="/icon.png"
-              width={1000}
-              height={1000}
-              alt="Carlin Tech"
-            />
+            <Image src="/icon.png" height={20} width={20} alt="Carlin Tech" />
           </div>
         </a>
         <div className={classes.container}>
           <Link target="_blank" href="tel:+6493099919">
-            <a>
-              <i className={`material-icons-outlined grad-icon`}>phone</i>
+            <a title="Phone +6493099919">
+              <i className="material-icons-outlined">phone</i>
               <p>+64 9 309 9919</p>
             </a>
           </Link>
           <Link target="_blank" href="mailto:info@carlintech.com">
-            <a>
-              <i className={"material-icons-outlined grad-icon"}>email</i>
+            <a title="Email info@carlintech.com">
+              <i className="material-icons-outlined">email</i>
               <p>info@carlintech.com</p>
             </a>
           </Link>

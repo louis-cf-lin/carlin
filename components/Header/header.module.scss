@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -21,7 +21,7 @@
   transition: background-color 0.2s, border-bottom 0.2s ease-out;
   &.show {
     background: white;
-    transition: background-color 0.4s ease-out 0.2s;
+    transition: background-color 0.2s ease-out 0.2s;
     .logo {
       opacity: 1;
       transform: none;
@@ -33,10 +33,14 @@
 }
 
 .logo {
+  width: 20px;
   height: 20px;
   transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.4s ease-out, opacity 0.2s ease-out;
+  .icon {
+    position: relative;
+  }
   .horizontal {
     display: none;
   }
@@ -52,19 +56,76 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
     color: $darker;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 500;
+    margin-left: 0.25em;
+    border-radius: 0.5em;
+    transition: background-color 0.1s ease-out;
     i {
+      font-size: inherit;
       color: $dark;
       background: transparent;
+      background-clip: border-box;
       -webkit-background-clip: border-box;
       -webkit-text-fill-color: inherit;
-      margin-left: 1.5em;
-      margin-right: 0.5em;
+      transition: color 0.1s ease-out;
     }
     p {
       display: none;
+    }
+    &:hover {
+      background: rgba($logo-orange, 0.1);
+      i {
+        color: $logo-orange;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .logo {
+    height: 20px;
+    width: 87px;
+    .icon {
+      display: none;
+    }
+    .horizontal {
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+  }
+  .container {
+    a {
+      margin-left: 1rem;
+      p {
+        margin-left: 0.5em;
+        display: block;
+        font-size: 12px;
+        transition: color 0.1s ease-out;
+      }
+      i {
+        background: linear-gradient(
+          to bottom right,
+          $logo-red,
+          $logo-orange,
+          $logo-yellow
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &:hover {
+        p {
+          color: $logo-orange;
+        }
+      }
+      &:hover {
+        background: none;
+      }
     }
   }
 }

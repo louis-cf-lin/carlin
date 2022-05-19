@@ -1,14 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  user-select: none;
-  border: none;
-  outline: none;
-  font-family: $poppins;
-}
-
 .line-btn {
   position: relative;
   background: linear-gradient(
@@ -66,17 +55,6 @@
   &:hover::before {
     background-position: left;
   }
-}
-
-.grad-icon {
-  background: linear-gradient(
-    to bottom right,
-    $logo-red,
-    $logo-orange,
-    $logo-yellow
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 body {
@@ -238,80 +216,7 @@ body {
   }
 }
 
-.icon-scroll {
-  width: 20px;
-  height: 30px;
-  margin-left: -12px;
-  bottom: 10px;
-  margin-top: -35px;
-  border: 2px solid $lightest;
-  border-radius: 999px;
-  opacity: 50%;
-  &,
-  &::before {
-    position: absolute;
-    left: 50%;
-  }
-  &::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background: $lightest;
-    margin-left: -3px;
-    top: 4px;
-    border-radius: 50%;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: scroll;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-}
-
 @media only screen and (min-width: 768px) {
-  nav {
-    .nav-logo {
-      .icon {
-        display: none;
-      }
-      .long {
-        display: block;
-      }
-    }
-    .nav-container {
-      a {
-        margin-left: 1rem;
-        p {
-          display: block;
-          transition: color 0.1s ease-out;
-        }
-        i {
-          background: linear-gradient(
-            to bottom right,
-            $logo-red,
-            $logo-orange,
-            $logo-yellow
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        &:hover {
-          p {
-            color: $logo-orange;
-          }
-        }
-      }
-    }
-  }
-
   .fill-btn {
     font-size: 1.25rem;
   }
