@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Blurb from "../components/Blurb/Blurb";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Landing from "../components/Landing/Landing";
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <main className={classes.main}>
         <Landing />
         <Services />
+        <Blurb />
       </main>
 
       <Footer />
