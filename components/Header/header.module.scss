@@ -1,0 +1,69 @@
+@import "../../styles/variables";
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+.nav {
+  width: 100%;
+  height: 60px;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(239, 244, 250, 0);
+  transition: background-color 0.2s, border-bottom 0.2s ease-out;
+  &.show {
+    background: white;
+    transition: background-color 0.4s ease-out 0.2s;
+    .logo {
+      opacity: 1;
+      transform: none;
+    }
+    .container {
+      opacity: 1;
+    }
+  }
+}
+
+.logo {
+  height: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.2s ease-out;
+  .horizontal {
+    display: none;
+  }
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darker;
+    font-size: 0.75rem;
+    font-weight: 500;
+    i {
+      color: $dark;
+      background: transparent;
+      -webkit-background-clip: border-box;
+      -webkit-text-fill-color: inherit;
+      margin-left: 1.5em;
+      margin-right: 0.5em;
+    }
+    p {
+      display: none;
+    }
+  }
+}

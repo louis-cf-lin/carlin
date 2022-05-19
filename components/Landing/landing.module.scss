@@ -1,0 +1,99 @@
+@import "../../styles/variables";
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  color: $lightest;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20vh $side-spacing;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: -moz-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: -webkit-linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.contact {
+  position: absolute;
+  top: 60px;
+  display: flex;
+  align-content: center;
+  right: $side-spacing;
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.1s ease-out;
+    p {
+      display: none;
+    }
+    * {
+      color: white;
+      font-size: 0.75rem;
+      transition: color 0.1s ease-out;
+    }
+    &:hover {
+      background: rgba(black, 0.5);
+      &,
+      * {
+        color: $logo-orange;
+      }
+    }
+  }
+}
+
+.title {
+  color: $lightest;
+  font-size: 1.75rem;
+  margin-bottom: 5vh;
+  font-weight: 400;
+  width: 100%;
+  line-height: 125%;
+  text-align: center;
+}
+
+.bgOuter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  // z-index: -2;
+  .bgInner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 60px;
+  object-fit: cover;
+  height: 60px;
+}
