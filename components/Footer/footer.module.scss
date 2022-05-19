@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.footer {
+  width: 100%;
+  padding: 4vh $side-spacing;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: $lighter;
+}
+
+.logo {
+  width: 25vw;
+  margin-right: 5vw;
+  .logoVertical {
+    display: none;
+  }
+  .logoHorizontal {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.icon {
+  display: flex;
+  width: 10vw;
+  font-size: 1.5em;
+  transition: margin-left 0.1s ease-out;
+  text-align: center;
+}
+
+.footerBlock {
+  display: flex;
+  width: 100%;
+  color: $darker;
+  font-size: 0.875em;
+  margin-top: 4vh;
+  transition: color 0.1s ease-out;
+  p {
+    align-self: center;
+    font-size: 0.75rem;
+  }
+  &:hover {
+    color: $logo-orange;
+    .fas {
+      margin-left: 2px;
+    }
+  }
+}
+
+.legal {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 0.5625rem;
+  color: $darker;
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+  letter-spacing: 0.05em;
+}

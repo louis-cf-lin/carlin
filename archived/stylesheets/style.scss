@@ -2,12 +2,10 @@
 
 $poppins: "Poppins", sans-serif;
 $side-spacing: 10vw;
-$darkest: #000000;
 $darker: #011627;
 $dark: #465362;
 $light: #cad4df;
 $lighter: #eff4fa;
-$lightest: #ffffff;
 $logo-red: #ec421d;
 $logo-orange: #ec691d;
 $logo-yellow: #ecbe1d;
@@ -435,62 +433,6 @@ nav {
     height: 100%;
     width: 100%;
     background: $darker;
-  }
-}
-
-footer {
-  width: 100%;
-  padding: 4vh $side-spacing;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background: $lighter;
-  .footer-logo {
-    align-self: flex-end;
-    width: 25vw;
-    margin-right: 5vw;
-    .long {
-      width: 100%;
-      object-fit: cover;
-    }
-    .stack {
-      display: none;
-    }
-  }
-  .footer-block {
-    display: flex;
-    width: 100%;
-    color: $darker;
-    font-size: 0.875em;
-    margin-top: 4vh;
-    transition: color 0.1s ease-out;
-    p {
-      align-self: center;
-      font-size: 0.75rem;
-    }
-    &:hover {
-      color: $logo-orange;
-      .fas {
-        margin-left: 2px;
-      }
-    }
-  }
-  .fas {
-    width: 70px;
-    font-size: 1.75em;
-    transition: margin-left 0.1s ease-out;
-    text-align: center;
-  }
-  .legal {
-    position: relative;
-    text-transform: uppercase;
-    font-size: 0.5625rem;
-    color: $darker;
-    width: 100%;
-    text-align: center;
-    margin-top: 5vh;
-    letter-spacing: 0.05em;
   }
 }
 
