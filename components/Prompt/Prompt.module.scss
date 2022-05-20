@@ -31,6 +31,15 @@
   margin-bottom: 4vh;
   font-weight: 300;
 }
+.bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: brightness(0.25);
+}
 
 @media only screen and (min-width: 768px) {
   .title {
@@ -46,6 +55,13 @@
 
 @media only screen and (min-width: 1200px) {
   .section {
-    padding: 10vh 0;
+    padding: 25vh 0;
+  }
+  .title {
+    font-size: 4em;
+  }
+  .subtitle {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
   }
 }
