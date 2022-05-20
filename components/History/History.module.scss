@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+
+.section {
+  width: 100%;
+  padding: 8vh $side-spacing;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.title {
+  width: 100%;
+  font-size: 1.125rem;
+  color: $darker;
+  font-weight: 500;
+  line-height: 125%;
+  margin-bottom: 4vh;
+}
+.text {
+  width: 100%;
+  font-size: 0.75rem;
+  color: $darkest;
+  line-height: 175%;
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .title {
+    width: 35vw;
+    font-size: calc(2rem + 2vw);
+    margin-bottom: 0;
+  }
+  .text {
+    width: 30vw;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section {
+    padding: 10vh calc(5vw + #{$side-spacing});
+  }
+}

@@ -67,28 +67,6 @@ body {
   }
 }
 
-.history {
-  width: 100%;
-  padding: 8vh $side-spacing;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  .history-title {
-    width: 100%;
-    font-size: 1.125rem;
-    color: $darker;
-    font-weight: 500;
-    line-height: 125%;
-    margin-bottom: 4vh;
-  }
-  .history-txt {
-    width: 100%;
-    font-size: 0.75rem;
-    color: $darkest;
-    line-height: 175%;
-  }
-}
-
 .questions {
   width: 100%;
   padding: 6vh $side-spacing;
@@ -132,42 +110,6 @@ body {
     }
   }
 
-  .blurb {
-    height: 35vh;
-    justify-content: space-between;
-    .blurb-txt {
-      margin: 0;
-      width: 75%;
-      font-size: 1.5em;
-      line-height: 200%;
-      font-weight: 400;
-    }
-  }
-
-  .partners {
-    padding: 5vh $side-spacing;
-    justify-content: space-around;
-    .partner-img {
-      margin: 2vh 3vw;
-      height: 3vh;
-    }
-  }
-
-  .history {
-    flex-direction: row;
-    align-items: flex-end;
-    .history-title {
-      width: 35vw;
-      font-size: calc(2rem + 2vw);
-      margin-bottom: 0;
-    }
-    .history-txt {
-      width: 30vw;
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
-  }
-
   .questions {
     .questions-title {
       font-size: 3em;
@@ -182,29 +124,6 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  .blurb {
-    height: 50vh;
-    padding: 0 calc(5vw + #{$side-spacing});
-    .blurb-txt {
-      width: 50vw;
-    }
-  }
-
-  .partners {
-    padding: 5vh calc(5vw + #{$side-spacing});
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    .partner-img {
-      margin: 0;
-      height: 4vh;
-      width: 10vw;
-    }
-  }
-
-  .history {
-    padding: 10vh calc(5vw + #{$side-spacing});
-  }
-
   .question {
     padding: 10vh 0;
   }

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Blurb from "../components/Blurb/Blurb";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import History from "../components/History/History";
 import Landing from "../components/Landing/Landing";
 import Partners from "../components/Partners/Partners";
 import Services from "../components/Services/Services";
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <Services />
         <Blurb />
         <Partners />
+        <History />
       </main>
 
       <Footer />
