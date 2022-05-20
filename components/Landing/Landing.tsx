@@ -32,7 +32,9 @@ const Landing: FC = () => {
         </Link>
       </div>
       <h1 className={classes.title}>Tomorrow&apos;s tech solutions, today.</h1>
-      <ButtonSolid label="Get Started" style={{ zIndex: 1 }} />
+      <Link href="/contact">
+        <ButtonSolid label="Get Started" style={{ zIndex: 1 }} />
+      </Link>
       <div className={classes.scrollIcon}></div>
     </div>
   );
