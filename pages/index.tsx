@@ -6,6 +6,7 @@ import Header from "../components/Header/Header";
 import History from "../components/History/History";
 import Landing from "../components/Landing/Landing";
 import Partners from "../components/Partners/Partners";
+import Prompt from "../components/Prompt/Prompt";
 import Services from "../components/Services/Services";
 import classes from "../styles/index.module.scss";
 
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <Blurb />
         <Partners />
         <History />
+        <Prompt />
       </main>
 
       <Footer />

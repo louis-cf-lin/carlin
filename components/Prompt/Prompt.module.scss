@@ -1,0 +1,51 @@
+@import "../../styles/variables";
+
+.section {
+  width: 100%;
+  padding: 6vh $side-spacing;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: $darker;
+  }
+}
+.title {
+  font-size: 1.5rem;
+  color: $lighter;
+  font-weight: 400;
+}
+.subtitle {
+  font-size: 0.75rem;
+  color: $light;
+  margin-top: 2vh;
+  margin-bottom: 4vh;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 3em;
+    font-weight: 500;
+  }
+  .subtitle {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 5vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section {
+    padding: 10vh 0;
+  }
+}

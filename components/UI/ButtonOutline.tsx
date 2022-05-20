@@ -1,12 +1,12 @@
 import { FC, HTMLAttributes } from "react";
 
-import classes from "./ButtonSolid.module.scss";
+import classes from "./ButtonOutline.module.scss";
 
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   label: string;
 }
 
-const ButtonSolid: FC<Props> = ({ label, ...rest }) => {
+const ButtonOutline: FC<Props> = ({ label, ...rest }) => {
   return (
     <button className={classes.btn} title={label} {...rest}>
       {label}
@@ -14,4 +14,4 @@ const ButtonSolid: FC<Props> = ({ label, ...rest }) => {
   );
 };
 
-export default ButtonSolid;
+export default ButtonOutline;
