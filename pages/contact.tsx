@@ -39,13 +39,17 @@ const Contact: NextPage = () => {
         <div className={classes.textContainer}>
           <h1 className={classes.h1}>Let&apos;s make it happen.</h1>
           <div className={classes.contactContainer}>
-            <div className={classes.contact}>
-              <i className="material-icons-outlined">phone</i>+64 9 309 9919
-            </div>
-            <div className={classes.contact}>
-              <i className="material-icons-outlined">email</i>
-              {EMAIL}
-            </div>
+            <Link href="tel:+6493099919" target="_blank">
+              <a className={classes.contact} title="Phone +64 9 309 9919">
+                <i className="material-icons-outlined">phone</i>+64 9 309 9919
+              </a>
+            </Link>
+            <Link href={`mailto:${EMAIL}`} target="_blank">
+              <a className={classes.contact} title={`Email ${EMAIL}`}>
+                <i className="material-icons-outlined">email</i>
+                {EMAIL}
+              </a>
+            </Link>
           </div>
         </div>
         <ContactForm />

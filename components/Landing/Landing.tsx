@@ -24,16 +24,10 @@ const Landing: FC = () => {
         <Image src="/icon.png" layout="fill" alt="Carlin Tech" />
       </div>
       <div className={classes.contact}>
-        <Link href="tel:+6493099919" target="_blank">
-          <a title="Phone +64 9 309 9919">
-            <i className="material-icons-outlined">phone</i>
-            <p>+64 9 309 9919</p>
-          </a>
-        </Link>
-        <Link href={`mailto:${EMAIL}`} target="_blank">
-          <a title={`Email ${EMAIL}`}>
-            <i className="material-icons-outlined">email</i>
-            <p>{EMAIL}</p>
+        <Link href="/contact">
+          <a title="Contact Us">
+            <p>Contact Us</p>
+            <i className="material-icons-outlined">send</i>
           </a>
         </Link>
       </div>

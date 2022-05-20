@@ -50,6 +50,12 @@ const Header: FC = () => {
               <p>{EMAIL}</p>
             </a>
           </Link>
+          <Link href="/contact">
+            <a title="Contact Us">
+              <i className="material-icons-outlined">send</i>
+              <p>Contact Us</p>
+            </a>
+          </Link>
         </div>
       </nav>
     </header>

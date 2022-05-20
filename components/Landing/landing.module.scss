@@ -150,12 +150,15 @@
   .contact {
     a {
       margin-left: 1rem;
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1rem;
+      * {
+        font-size: 14px;
+      }
       p {
         display: block;
       }
       i {
-        margin-right: 0.5rem;
+        margin-left: 0.5rem;
       }
     }
   }
