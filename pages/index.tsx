@@ -4,6 +4,7 @@ import Blurb from "../components/Blurb/Blurb";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Landing from "../components/Landing/Landing";
+import Partners from "../components/Partners/Partners";
 import Services from "../components/Services/Services";
 import classes from "../styles/index.module.scss";
 
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
         <Landing />
         <Services />
         <Blurb />
+        <Partners />
       </main>
 
       <Footer />

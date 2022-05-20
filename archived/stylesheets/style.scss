@@ -67,22 +67,6 @@ body {
   }
 }
 
-.partners {
-  width: 100%;
-  padding-top: 5vh;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  .partner-img {
-    height: 2.5vh;
-    margin: 1.5vh 3vw;
-    object-fit: contain;
-    object-position: 50% 50%;
-  }
-}
-
 .history {
   width: 100%;
   padding: 8vh $side-spacing;
