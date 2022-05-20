@@ -1,14 +1,14 @@
-import { FC, HTMLAttributes } from "react";
+import { ButtonHTMLAttributes, FC } from "react";
 
 import classes from "./ButtonOutline.module.scss";
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
 }
 
-const ButtonOutline: FC<Props> = ({ label, ...rest }) => {
+const ButtonOutline: FC<Props> = ({ label, className, ...rest }) => {
   return (
-    <button className={classes.btn} title={label} {...rest}>
+    <button className={`${classes.btn} ${className}`} title={label} {...rest}>
       {label}
     </button>
   );

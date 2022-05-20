@@ -1,0 +1,128 @@
+@import "../../styles/variables";
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 0;
+  margin-bottom: 5vh;
+  background: white;
+}
+
+.field {
+  width: 100%;
+  margin: 0.25rem 0 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.25rem 0;
+  }
+  input,
+  textarea {
+    padding: 0.4rem 0;
+    width: 100%;
+    font-size: 14px;
+    border-bottom: thin solid transparent;
+    transition: border 0.1s ease-out;
+    &:hover {
+      border-bottom: thin solid $lighter;
+    }
+    &:focus {
+      border-bottom: thin solid black;
+    }
+    &::placeholder {
+      color: $light;
+    }
+  }
+  textarea {
+    resize: none;
+  }
+  p {
+    display: flex;
+    align-items: center;
+    height: 1rem;
+    color: $logo-red;
+    font-size: 10px;
+  }
+  &.invalid {
+    label {
+      color: $logo-red;
+    }
+    input:focus,
+    textarea:focus {
+      color: $logo-red;
+      border-bottom-color: $logo-red;
+    }
+  }
+}
+
+.submit {
+  align-self: flex-end;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding: 0.75em 1.5em;
+  border-radius: 999px;
+  i {
+    margin-left: 0.25em;
+    transition: transform 0.1s ease-out;
+  }
+  &:hover {
+    background: rgba(black, 0.02);
+    i {
+      transform: translateX(2px);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .form {
+    margin: 5vh 0 10vh 0;
+    padding: 2.5rem 5vw;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px 4px rgba(black, 0.05);
+  }
+  .field {
+    label {
+      font-size: 11px;
+    }
+    input,
+    textarea {
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .form {
+    max-width: 700px;
+    padding: 2.5rem 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .field {
+    margin: 0.5rem 0;
+    label {
+      font-size: 11px;
+    }
+    input,
+    textarea {
+      font-size: 16px;
+    }
+  }
+  .name,
+  .email {
+    flex: 1 1 0;
+  }
+  .email {
+    margin-left: 2.5rem;
+  }
+  .submit {
+    margin-left: auto;
+  }
+}

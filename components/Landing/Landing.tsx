@@ -15,6 +15,7 @@ const Landing: FC = () => {
             src="/landing.jpg"
             layout="fill"
             objectFit="cover"
+            priority={true}
             alt="Motherboard"
           />
         </div>

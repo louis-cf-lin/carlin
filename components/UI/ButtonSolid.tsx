@@ -1,8 +1,8 @@
-import { FC, HTMLAttributes } from "react";
+import { ButtonHTMLAttributes, FC } from "react";
 
 import classes from "./ButtonSolid.module.scss";
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
 }
 

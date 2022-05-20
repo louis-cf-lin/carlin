@@ -62,14 +62,11 @@
     transition: background-color 0.1s ease-out;
     * {
       color: white;
-      font-size: 0.75rem;
+      font-size: 12px;
       transition: color 0.1s ease-out;
     }
     p {
       display: none;
-    }
-    i {
-      font-size: 1rem;
     }
     &:hover {
       background: rgba(black, 0.5);
@@ -83,7 +80,7 @@
 
 .title {
   color: $lightest;
-  font-size: 1.75rem;
+  font-size: 48px;
   margin-bottom: 5vh;
   font-weight: 400;
   width: 100%;
@@ -164,7 +161,7 @@
   }
   .title {
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 64px;
     width: 85%;
     text-align: left;
     line-height: 150%;

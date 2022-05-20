@@ -29,27 +29,27 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: $lightest;
-  font-size: 1rem;
+  font-size: 16px;
+  line-height: 1.5em;
   text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .section {
-    height: 35vh;
+    height: 50vh;
     justify-content: space-between;
   }
   .text {
     margin: 0;
     width: 75%;
-    font-size: 1.5em;
-    line-height: 200%;
+    font-size: 24px;
+    line-height: 2em;
     font-weight: 400;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section {
-    height: 50vh;
     padding: 0 calc(5vw + #{$side-spacing});
   }
   .text {

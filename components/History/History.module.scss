@@ -9,15 +9,15 @@
 }
 .title {
   width: 100%;
-  font-size: 1.125rem;
+  font-size: 20px;
   color: $darker;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 125%;
   margin-bottom: 4vh;
 }
 .text {
   width: 100%;
-  font-size: 0.75rem;
+  font-size: 12px;
   color: $darkest;
   line-height: 175%;
 }
@@ -34,7 +34,7 @@
   }
   .text {
     width: 30vw;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 500;
   }
 }

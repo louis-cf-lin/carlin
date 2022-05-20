@@ -29,12 +29,12 @@
   column-gap: 10%;
   i {
     grid-area: icon;
-    font-size: 2em;
+    font-size: 32px;
     text-align: right;
   }
   .cardTitle {
     grid-area: title;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
     color: $darker;
     margin: 1vh 0;
@@ -69,12 +69,12 @@
       text-align: left;
     }
     .cardTitle {
-      font-size: 1.5em;
+      font-size: 24px;
       text-align: left;
     }
     .cardText {
-      font-size: 0.75em;
-      line-height: 200%;
+      font-size: 12px;
+      line-height: 1.75em;
       align-self: flex-start;
     }
     &:nth-child(2) {
