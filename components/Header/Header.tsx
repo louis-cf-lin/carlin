@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useEffect, useRef, useState } from "react";
+import { EMAIL } from "../../constants/email";
 
 import classes from "./Header.module.scss";
 
@@ -43,10 +44,10 @@ const Header: FC = () => {
               <p>+64 9 309 9919</p>
             </a>
           </Link>
-          <Link target="_blank" href="mailto:info@carlintech.com">
-            <a title="Email info@carlintech.com">
+          <Link target="_blank" href={`mailto:${EMAIL}`}>
+            <a title={`Email ${EMAIL}`}>
               <i className="material-icons-outlined">email</i>
-              <p>info@carlintech.com</p>
+              <p>{EMAIL}</p>
             </a>
           </Link>
         </div>

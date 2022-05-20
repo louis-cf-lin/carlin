@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import { EMAIL } from "../../constants/email";
 import ButtonSolid from "../UI/ButtonSolid";
 
 import classes from "./Landing.module.scss";
@@ -28,10 +29,10 @@ const Landing: FC = () => {
             <p>+64 9 309 9919</p>
           </a>
         </Link>
-        <Link href="mailto:info@carlintech.com" target="_blank">
-          <a title="Email info@carlintech.com">
+        <Link href={`mailto:${EMAIL}`} target="_blank">
+          <a title={`Email ${EMAIL}`}>
             <i className="material-icons-outlined">email</i>
-            <p>info@carlintech.com</p>
+            <p>{EMAIL}</p>
           </a>
         </Link>
       </div>

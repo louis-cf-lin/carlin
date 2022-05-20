@@ -48,12 +48,12 @@ const Footer: FC = () => {
           <p>+64 9 309 9919</p>
         </a>
       </Link>
-      <Link href="mailto:info@carlintech.com" target="_blank">
+      <Link href="mailto:contact@carlinpc.co.nz" target="_blank">
         <a className={classes.footerBlock}>
           <i className={`material-icons-outlined ${classes.icon} grad-icon`}>
             email
           </i>
-          <p>info@carlintech.com</p>
+          <p>contact@carlinpc.co.nz</p>
         </a>
       </Link>
       <div className={classes.legal}>
