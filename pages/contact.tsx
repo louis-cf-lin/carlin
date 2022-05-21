@@ -24,6 +24,7 @@ const Contact: NextPage = () => {
           src="/contact.jpg"
           layout="fill"
           objectFit="cover"
+          priority={true}
           alt="Background"
         />
       </div>
