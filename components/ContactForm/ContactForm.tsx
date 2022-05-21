@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import { useForm } from "react-hook-form";
 
 import classes from "./ContactForm.module.scss";
@@ -11,7 +11,12 @@ type FormData = {
   message: string;
 };
 
-const ContactForm: FC = () => {
+type Props = {
+  mailState: string;
+  setMailState: Dispatch<SetStateAction<string>>;
+};
+
+const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
   const {
     register,
     handleSubmit,
@@ -39,13 +44,18 @@ const ContactForm: FC = () => {
 
     const { error } = await res.json();
     if (error) {
-      return console.error(error);
+      return setMailState("ERROR");
     }
-    console.log("woo done!");
+    return setMailState("SUCCESS");
   });
 
   return (
-    <form onSubmit={onSubmit} className={classes.form}>
+    <form
+      onSubmit={onSubmit}
+      className={`${classes.form} ${
+        mailState === "SUCCESS" ? classes.success : ""
+      } ${mailState === "ERROR" ? classes.error : ""}`}
+    >
       <div
         className={`${classes.field} ${classes.name} ${
           errors.name ? classes.invalid : ""

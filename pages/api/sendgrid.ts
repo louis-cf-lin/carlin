@@ -28,8 +28,6 @@ type ResponseData = {
   error?: string;
 };
 
-// TODO - req and res types
-
 async function sendEmail(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
