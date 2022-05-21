@@ -64,6 +64,7 @@
   align-self: flex-end;
   cursor: pointer;
   font-weight: 500;
+  height: 3rem;
   display: flex;
   align-items: center;
   padding: 0.75em 1.5em;
@@ -77,6 +78,10 @@
     i {
       transform: translateX(2px);
     }
+  }
+  &.processing {
+    pointer-events: none;
+    opacity: 0.5;
   }
 }
 

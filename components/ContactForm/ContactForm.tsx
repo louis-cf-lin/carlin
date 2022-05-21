@@ -1,4 +1,4 @@
-import { Dispatch, FC, SetStateAction } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import classes from "./ContactForm.module.scss";
@@ -17,6 +17,7 @@ type Props = {
 };
 
 const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
+  const [isProcessing, setIsProcessing] = useState(false);
   const {
     register,
     handleSubmit,
@@ -33,8 +34,8 @@ const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
   });
 
   const onSubmit = handleSubmit(async (data) => {
-    // if (Object.keys(errors).length > 0) return;
     if (!isValid) return;
+    setIsProcessing(true);
 
     const res = await fetch("/api/sendgrid", {
       method: "POST",
@@ -45,12 +46,10 @@ const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
     });
 
     const { error } = await res.json();
-    console.log(error);
     if (error) {
       return setMailState("ERROR");
     }
 
-    console.log("donezo");
     return setMailState("SUCCESS");
   });
 
@@ -135,8 +134,20 @@ const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
         />
         <p>{errors.message?.message}</p>
       </div>
-      <button type="submit" className={classes.submit} title="Submit">
-        Submit <i className="material-icons-outlined">arrow_forward</i>
+      <button
+        type="submit"
+        className={`${classes.submit} ${
+          isProcessing ? classes.processing : ""
+        }`}
+        title="Submit"
+      >
+        {isProcessing ? (
+          "Processing ..."
+        ) : (
+          <>
+            Submit <i className="material-icons-outlined">arrow_forward</i>
+          </>
+        )}
       </button>
     </form>
   );
