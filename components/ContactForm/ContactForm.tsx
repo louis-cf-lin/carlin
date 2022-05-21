@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
-import ButtonOutline from "../UI/ButtonOutline";
 
 import classes from "./ContactForm.module.scss";
 
@@ -16,12 +15,33 @@ const ContactForm: FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm<FormData>();
+    formState: { errors, isValid },
+  } = useForm<FormData>({
+    defaultValues: {
+      name: "Name test",
+      email: "test@test.com",
+      company: "Company test",
+      subject: "Subject test",
+      message: "Message test",
+    },
+  });
 
-  const onSubmit = handleSubmit((data) => {
-    console.log(errors);
-    console.log(data);
+  const onSubmit = handleSubmit(async (data) => {
+    if (!isValid) return;
+
+    const res = await fetch("/api/sendgrid", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const { error } = await res.json();
+    if (error) {
+      return console.error(error);
+    }
+    console.log("woo done!");
   });
 
   return (

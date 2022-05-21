@@ -12,7 +12,9 @@ const Prompt: FC = () => {
         Become one of many of our clients around the world.
       </div>
       <Link href="/contact">
-        <ButtonOutline label="Get in touch" />
+        <a>
+          <ButtonOutline label="Get in touch" />
+        </a>
       </Link>
       <div className={classes.bg}>
         <Image src="/prompt.jpg" layout="fill" objectFit="cover" alt="Scale" />
