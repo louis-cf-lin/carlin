@@ -53,13 +53,6 @@
   flex-direction: column;
 }
 
-.errorContainer {
-  margin-top: 20vh;
-  .h1 {
-    margin-bottom: 2rem;
-  }
-}
-
 .h1 {
   display: flex;
   align-items: center;
@@ -79,6 +72,29 @@
   a {
     font-size: inherit;
     text-decoration: underline;
+  }
+}
+
+.errorContainer {
+  margin-top: 20vh;
+  .h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.successContainer {
+  margin: auto;
+  align-items: center;
+  .h1 {
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .p {
+    margin-top: 2rem;
+  }
+  .sendAnother {
+    margin-top: 4rem;
   }
 }
 

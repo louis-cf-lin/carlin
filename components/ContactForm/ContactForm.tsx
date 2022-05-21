@@ -23,15 +23,17 @@ const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
     formState: { errors, isValid },
   } = useForm<FormData>({
     defaultValues: {
-      name: "Name test",
-      email: "test@test.com",
-      company: "Company test",
-      subject: "Subject test",
-      message: "Message test",
+      name: "",
+      email: "",
+      company: "",
+      subject: "",
+      message: "",
     },
+    mode: "onTouched",
   });
 
   const onSubmit = handleSubmit(async (data) => {
+    // if (Object.keys(errors).length > 0) return;
     if (!isValid) return;
 
     const res = await fetch("/api/sendgrid", {
@@ -43,9 +45,12 @@ const ContactForm: FC<Props> = ({ mailState, setMailState }) => {
     });
 
     const { error } = await res.json();
+    console.log(error);
     if (error) {
       return setMailState("ERROR");
     }
+
+    console.log("donezo");
     return setMailState("SUCCESS");
   });
 

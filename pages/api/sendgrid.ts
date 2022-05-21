@@ -33,13 +33,19 @@ async function sendEmail(
   res: NextApiResponse<ResponseData>
 ) {
   try {
+    const message = `
+      Name: ${req.body.name}\r\n
+      Email: ${req.body.email}\r\n
+      Company: ${req.body.company || "(Company left blank)"}\r\n
+      Subject: ${req.body.subject}\r\n
+      Message: ${req.body.message}
+    `;
     await sendgrid.send({
-      to: "lol.louii.lin@gmail.com",
-      from: "lol.louii.lin@gmail.com",
-      subject: `${req.body.subject}`,
-      html: `New message from ${req.body.name} ${
-        req.body.company ? `of ${req.body.company}` : "(no company submitted)"
-      }\n${req.body.message}\nYou can reply to them at ${req.body.email}`,
+      to: "info@carlinpc.co.nz",
+      from: "clin750@aucklanduni.ac.nz",
+      subject: `A new message from ${req.body.name}`,
+      text: message,
+      html: message.replace(/\r\n/g, "<br>"),
     });
   } catch (error) {
     if (isResponseError(error)) {

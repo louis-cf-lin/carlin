@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ContactForm from "../components/ContactForm/ContactForm";
+import ButtonOutline from "../components/UI/ButtonOutline";
 import { EMAIL } from "../constants/email";
 
 import classes from "../styles/contact.module.scss";
@@ -54,6 +55,21 @@ const Contact: NextPage = () => {
               </Link>
               .
             </p>
+          </div>
+        )}
+        {mailState === "SUCCESS" && (
+          <div
+            className={`${classes.textContainer} ${classes.successContainer}`}
+          >
+            <h1 className={classes.h1}>Message sent!</h1>
+            <p className={classes.p}>
+              Thanks for your message! We&apos;ll be in touch with you soon.
+            </p>
+            <ButtonOutline
+              label="Send another message"
+              onClick={() => setMailState("IDLE")}
+              className={classes.sendAnother}
+            />
           </div>
         )}
         {mailState === "IDLE" && (
