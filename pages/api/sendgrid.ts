@@ -41,8 +41,8 @@ async function sendEmail(
       Message: ${req.body.message}
     `;
     await sendgrid.send({
-      to: "info@carlinpc.co.nz",
-      from: "clin750@aucklanduni.ac.nz",
+      to: "sales@carlinpc.co.nz",
+      from: "info@carlinpc.co.nz",
       subject: `A new message from ${req.body.name}`,
       text: message,
       html: message.replace(/\r\n/g, "<br>"),
