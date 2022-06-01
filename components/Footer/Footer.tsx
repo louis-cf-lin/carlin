@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
+import { EMAIL } from "../../constants/email";
 
 import classes from "./Footer.module.scss";
 
@@ -48,12 +49,12 @@ const Footer: FC = () => {
           <p>+64 9 309 9919</p>
         </a>
       </Link>
-      <Link href="mailto:contact@carlinpc.co.nz" target="_blank">
+      <Link href={`mailto:${EMAIL}`} target="_blank">
         <a className={classes.footerBlock}>
           <i className={`material-icons-outlined ${classes.icon} grad-icon`}>
             email
           </i>
-          <p>contact@carlinpc.co.nz</p>
+          <p>{EMAIL}</p>
         </a>
       </Link>
       <div className={classes.legal}>
