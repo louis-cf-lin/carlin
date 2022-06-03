@@ -25,6 +25,18 @@ html {
   scroll-behavior: smooth;
 }
 
+button {
+  cursor: pointer;
+  &,
+  * {
+    user-select: none;
+  }
+}
+
+img {
+  user-select: none;
+}
+
 .grad-icon {
   background: linear-gradient(
     to bottom right,
