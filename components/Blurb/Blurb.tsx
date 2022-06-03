@@ -7,7 +7,7 @@ const Blurb: FC = () => {
   return (
     <div className={classes.section}>
       <div className={classes.image}>
-        <Image src="/blurb.png" layout="fill" objectFit="cover" alt="Blurb" />
+        <Image src="/blurb.jpg" layout="fill" objectFit="cover" alt="Blurb" />
       </div>
       <div className={classes.text}>
         Specialists in integrated IT infrastructure and security planning,
